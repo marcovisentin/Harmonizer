@@ -256,11 +256,11 @@ if __name__ == "__main__":
     parser.add_argument('--use_evaluator', action='store_true', help='Whether to automatically pick results')
 
     # For single image
-    parser.add_argument('--image_path', default="./demo/girl_comp.jpg", type=str)
-    parser.add_argument('--mask_path', default="./demo/girl_mask.jpg", type=str)
-    parser.add_argument('--foreground_prompt', default="girl golden autumn", type=str,
+    parser.add_argument('--image_path', default="./my_assets/test_composite_image.png", type=str)
+    parser.add_argument('--mask_path', default="./my_assets/test_composite_mask.png", type=str)
+    parser.add_argument('--foreground_prompt', default="bottle dim", type=str,
                         help='Text describes the environment of foreground.')
-    parser.add_argument('--background_prompt', default="girl winter", type=str,
+    parser.add_argument('--background_prompt', default="bottle warm", type=str,
                         help='Text describes the environment of background.')
 
     # For multiple images
