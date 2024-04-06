@@ -290,7 +290,10 @@ if __name__ == "__main__":
     generator = torch.Generator().manual_seed(args.seed)
     diffusion_steps = args.diffusion_steps
     guidance = args.guidance
-    device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+    device_earlier = 'cuda:0' if torch.cuda.is_available() else 'cpu' #TODO: remove, just checking something here
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    print("Device use earlier probably:", device_earlier)
+    print("Device in use:", device)
 
     ldm_stable = StableDiffusionPipeline.from_pretrained(args.pretrained_diffusion_path).to(device)
     ldm_stable.scheduler = DDIMScheduler.from_config(ldm_stable.scheduler.config)
