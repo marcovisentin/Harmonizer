@@ -1,6 +1,6 @@
 import kornia as kn
 import argparse
-from pidinet import models
+from thirdparty.pidinet import models
 import torch
 from dataclasses import dataclass
 
